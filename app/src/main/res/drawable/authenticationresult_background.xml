@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 灰色阴影 -->
+    <item>
+        <shape>
+            <solid android:color="#eaecf3" />
+            <gradient
+                android:angle="270"
+                android:centerColor="#e8ebf2"
+                android:endColor="#f6f6fb"
+                android:startColor="#e7e9f7"
+                android:type="linear" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+    <!--白色前景-->
+    <item
+        android:bottom="5dp">
+        <shape>
+            <solid android:color="#FFFFFF" /> <!-- 定义填充的颜色值 -->
+            <!-- 圆角 -->
+            <corners android:radius="5dp" /> <!-- 设置四个角的半径 -->
+        </shape>
+    </item>
+</layer-list>

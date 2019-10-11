@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    tools:context=".view.StartActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="传统验证太繁琐？"
+        android:textSize="25sp"
+        android:textColor="#cc1f212a"
+        android:layout_marginTop="32dp"/>
+
+    <ImageView
+        android:id="@+id/iv_flash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/gif"
+        android:layout_marginTop="21dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="试试闪验！"
+        android:textSize="25sp"
+        android:layout_marginTop="28dp"/>
+
+    <Button
+        android:id="@+id/button01"
+        android:onClick="doClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/authentication_button"
+        android:text="免密登录"
+        android:textColor="#ffffff"
+        tools:ignore="OnClick" />
+    <!--<CheckBox-->
+        <!--android:id="@+id/checkbox_screen"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="是否横屏显示"-->
+        <!--android:checked="false"/>-->
+
+</LinearLayout>

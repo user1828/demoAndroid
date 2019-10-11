@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">闪验 demo</string>
+    <string name="sdktitle">shanyan sdk v2.2.1.2 demo</string>
+    <string name="sdkinit">sdk  初 始 化</string>
+    <string name="preInitNum">sdk 预 取 号</string>
+    <string name="authpage">拉 起 授 权 页</string>
+    <string name="displacePhone">置 换 手 机 号</string>
+    <string name="normal_mode">弹窗模式</string>
+    <string name="chenjinshi">沉浸式模式</string>
+    <string name="debug_mode">调试模式</string>
+    <string name="modetitle">调试模式</string>
+</resources>

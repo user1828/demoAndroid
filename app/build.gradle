@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "chuanglan.com.shanyantest"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 221
+        versionName "2.2.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file('../app/***.jks')
+            storePassword '***'
+            keyAlias '***'
+            keyPassword '***'
+            v2SigningEnabled false
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField('boolean', 'IS_LOG', 'true')
+            buildConfigField('String', 'SERVER_URL', '"https://api.253.com/"')
+            buildConfigField('String', 'APP_ID', '"***"')
+            buildConfigField('String', 'APP_KEY', '"***"')
+        }
+
+        debug {
+                       minifyEnabled true
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField('boolean', 'IS_LOG', 'true')
+            buildConfigField('String', 'SERVER_URL', '"https://api.253.com/"')
+            buildConfigField('String', 'APP_ID', '"***"')
+            buildConfigField('String', 'APP_KEY', '"***"')
+        }
+
+    }
+}
+repositories {
+    flatDir {
+        dirs '../app/libs'
+    }
+}
+
+dependencies {
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    //okhttp
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    //Retrofit通过GSON将结果转换为Bean对象
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    //permission
+    compile 'com.yanzhenjie:permission:2.0.0-rc2'
+    compile 'com.yanzhenjie.alertdialog:alertdialog:1.0.1'
+    compile 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    debugApi(name: 'shanyan_sdk_v2.2.1.2', ext: 'aar')
+    releaseApi(name: 'shanyan_sdk_v2.2.1.2', ext: 'aar')
+}

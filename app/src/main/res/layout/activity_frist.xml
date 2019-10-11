@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".view.FristActivity">
+
+    <TextView
+        android:id="@+id/sdktitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/sdktitle"
+        android:textColor="#cc1f212a"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/authentication_button"
+        android:text="@string/normal_mode"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/chenjinshi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/authentication_button"
+        android:text="@string/chenjinshi"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/debug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/authentication_button"
+        android:text="@string/debug_mode"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/umcsdk_login_btn_bg"
+        android:text="号码认证体验"
+        android:textColor="@color/white" />
+
+    <CheckBox
+        android:id="@+id/checkbox_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:checked="false"
+        android:text="是否横屏显示" />
+
+
+</LinearLayout>
